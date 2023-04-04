@@ -1,0 +1,7 @@
+.image {
+  -webkit-column-break-inside: avoid;
+}
+
+.backface-hidden {
+  -webkit-backface-visibility: hidden;
+}
