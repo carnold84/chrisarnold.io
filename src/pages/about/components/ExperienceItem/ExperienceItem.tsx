@@ -1,7 +1,8 @@
 import classNames from "classnames";
 import { motion } from "framer-motion";
-import { forwardRef, ReactNode, RefObject } from "react";
-import Timeline from "../Timeline";
+import { ReactNode, RefObject, forwardRef } from "react";
+
+import TimelinePoint from "../TimelinePoint";
 
 interface ExperienceBase {
   duration: ReactNode;
@@ -61,7 +62,7 @@ const ExperienceItem = forwardRef<HTMLDivElement, Props>(
         <div className={"flex w-1/2"} style={{ width: "calc(50% + 16px)" }}>
           {!isOdd && (
             <div className="mr-5">
-              <Timeline />
+              <TimelinePoint />
             </div>
           )}
           <div
@@ -78,7 +79,7 @@ const ExperienceItem = forwardRef<HTMLDivElement, Props>(
               variants={variants}
             >
               {typeof duration === "string" ? (
-                <p className="mb-1 mt-0 text-body text-text-200 sm:text-h5">
+                <p className="mb-1 mt-0 text-sm text-text-200 sm:text-h5">
                   {duration}
                 </p>
               ) : (
@@ -93,7 +94,7 @@ const ExperienceItem = forwardRef<HTMLDivElement, Props>(
               variants={variants}
             >
               {typeof title === "string" ? (
-                <h3 className="mb-1 text-h5 lowercase text-text-500 sm:text-h4">
+                <h3 className="mb-1 text-body lowercase text-text-500 sm:text-h4">
                   {title}
                 </h3>
               ) : (
@@ -108,7 +109,7 @@ const ExperienceItem = forwardRef<HTMLDivElement, Props>(
               variants={variants}
             >
               {typeof employer === "string" ? (
-                <h4 className="mb-10 text-body lowercase text-text-300 sm:mb-20 sm:text-h5">
+                <h4 className="mb-10 text-sm lowercase text-text-300 sm:mb-20 sm:text-h5">
                   {employer}
                 </h4>
               ) : (
@@ -118,7 +119,7 @@ const ExperienceItem = forwardRef<HTMLDivElement, Props>(
           </div>
           {isOdd && (
             <div className="ml-5">
-              <Timeline />
+              <TimelinePoint />
             </div>
           )}
         </div>

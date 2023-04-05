@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { createRef, useEffect, useState } from "react";
 
 import ExperienceItem, { Experience } from "./components/ExperienceItem";
-import Timeline from "./components/Timeline";
+import TimelinePoint from "./components/TimelinePoint";
 
 const About = () => {
   const [experience, setExperience] = useState<{ [id: string]: Experience }>({
@@ -65,7 +65,7 @@ const About = () => {
     experience_8: {
       duration: "2004 - 2006",
       employer: (
-        <h4 className="text-body lowercase text-text-300 sm:text-h5">
+        <h4 className="text-sm lowercase text-text-300 sm:text-h5">
           Christchurch Polytechnic
           <br />
           School of Art & Design
@@ -78,7 +78,7 @@ const About = () => {
       isVisible: false,
       ref: createRef(),
       title: (
-        <h3 className="mb-1 text-h5 lowercase text-text-500 sm:text-h4">
+        <h3 className="mb-1 text-sm lowercase text-text-500 sm:text-h4">
           Bachelor of Design
           <br />
           <span className="hidden sm:inline">(Visual Communication)</span>
@@ -138,7 +138,7 @@ const About = () => {
         y: -100,
       }}
     >
-      <div className="flex h-[80vh] w-full items-center justify-center">
+      <div className="flex h-[75vh] w-full items-center justify-center">
         <div className="w-full max-w-3xl">
           <h1 className="text-center font-display text-h1 font-medium lowercase text-text-500 md:text-[100px] xl:text-[140px]">
             Hello.
@@ -152,8 +152,8 @@ const About = () => {
       </div>
       <div className="flex w-full justify-center">
         <div className="w-full max-w-6xl">
-          <div className="h-32">
-            <Timeline />
+          <div className="h-48">
+            <TimelinePoint isPulsing={true} />
           </div>
           <div className="flex flex-col items-center justify-center">
             <h2 className="font-display text-h3 font-medium lowercase text-text-500 sm:text-h2 md:text-h1">
