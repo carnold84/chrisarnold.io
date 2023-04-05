@@ -1,10 +1,12 @@
-import { motion } from "framer-motion";
+import { Transition, motion } from "framer-motion";
+
+import theme from "../../../../config/theme";
 
 interface Props {
   isPulsing?: boolean;
 }
 
-const transition = {
+const transition: Transition = {
   duration: 1.6,
   ease: "easeInOut",
   times: [0, 0.5, 1],
@@ -19,8 +21,12 @@ const TimelinePoint = ({ isPulsing = false }: Props) => {
           animate={
             isPulsing
               ? {
-                  borderColor: ["#626467", "#b0b2b3", "#626467"],
-                  scale: [1, 1.2, 1],
+                  borderColor: [
+                    theme.colors.neutral[300],
+                    theme.colors.neutral[800],
+                    theme.colors.neutral[300],
+                  ],
+                  scale: [1, 1.3, 1],
                 }
               : undefined
           }
@@ -31,7 +37,7 @@ const TimelinePoint = ({ isPulsing = false }: Props) => {
           animate={
             isPulsing
               ? {
-                  backgroundColor: ["#626467", "#b0b2b3", "#626467"],
+                  backgroundColor: theme.colors.neutral[800],
                   scale: [1, 1.2, 1],
                 }
               : undefined
