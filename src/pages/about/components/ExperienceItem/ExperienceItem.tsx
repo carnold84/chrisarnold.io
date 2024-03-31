@@ -125,7 +125,7 @@ const ExperienceItem = forwardRef<HTMLDivElement, Props>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 export default ExperienceItem;

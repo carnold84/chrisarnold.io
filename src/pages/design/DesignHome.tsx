@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+
 import Image from "../../components/Image";
 import AnimatedGrid from "./components/AnimatedGrid/AnimatedGrid";
 import DesignCard from "./components/DesignCard/DesignCard";
-import AuraThumbnail from "./projects/Aura/assets/thumbnail.jpg";
 import ApolloThumbnail from "./projects/Apollo/assets/thumbnail.jpg";
+import AuraThumbnail from "./projects/Aura/assets/thumbnail.jpg";
 
 const DesignHome = () => {
   return (

@@ -17,7 +17,7 @@ const MainMenuItem = ({ element = "navLink", label, to }: Props) => {
             {
               "text-text-300": !isActive,
               "text-text-500": isActive,
-            }
+            },
           )}
         >
           {label}
