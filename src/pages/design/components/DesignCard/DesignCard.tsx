@@ -15,7 +15,7 @@ const DesignCard = ({ number, thumbnail, title, to }: Props) => {
       to={to}
     >
       <motion.img
-        className="mb-3 h-64 w-full origin-center border border-neutral-100 object-cover object-top transition-all ease-linear will-change-transform md:h-60 xs:h-56"
+        className="mb-3 h-64 w-full origin-center border border-neutral-100 object-cover object-top transition-all ease-linear will-change-transform xs:h-56 md:h-60"
         src={thumbnail}
         style={{
           transformStyle: "preserve-3d",

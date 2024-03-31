@@ -176,7 +176,7 @@ const About = () => {
                     title={title}
                   />
                 );
-              }
+              },
             )}
           </div>
         </div>
