@@ -1,11 +1,16 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
+  "plugins": ["react", "typescript", "oxc", "import", "unicorn"],
   "options": {
     "typeAware": true
   },
   "rules": {
     "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+    "react/only-export-components": ["warn", { "allowConstantExport": true }],
+    "sort-keys": "error",
+    "unicorn/filename-case": ["error", { "case": "kebabCase" }],
+    "import/no-default-export": "error",
+    "oxc/no-barrel-file": ["error", { "threshold": 10 }],
+    "typescript/consistent-type-imports": "error"
   }
 }

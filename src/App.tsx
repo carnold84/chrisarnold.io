@@ -1,5 +1,22 @@
+import { lazy } from "react";
+import { Router, type RouteDef } from "@/components/Router";
+
+const About = lazy(() => import("@/routes/About"));
+const Code = lazy(() => import("@/routes/Code"));
+
 function App() {
-  return <div className="p-4">Test</div>;
+  const routes: RouteDef[] = [
+    {
+      element: <About />,
+      path: "/",
+    },
+    {
+      element: <Code />,
+      path: "/code",
+    },
+  ];
+
+  return <Router routes={routes} fallback={<h1>Not found</h1>} />;
 }
 
 export default App;
