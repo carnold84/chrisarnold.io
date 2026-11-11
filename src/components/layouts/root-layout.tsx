@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 
-import { Logo } from "@/components/logo";
-import { MainMenuItem } from "@/components/main-menu-item";
+import { Logo } from "@/components/ui/logo";
+import { MainMenuItem } from "@/components/ui/main-menu-item";
 
 export interface MenuItem {
   id: string;
