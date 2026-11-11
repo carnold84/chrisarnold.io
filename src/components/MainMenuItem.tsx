@@ -8,12 +8,12 @@ export interface MainMenuItemProps {
   to: string;
 }
 
-export const MainMenuItem = ({
+export function MainMenuItem({
   isActive,
   label,
   onClick,
   to,
-}: MainMenuItemProps) => {
+}: MainMenuItemProps) {
   const handleClick = (
     event: ReactMouseEvent<HTMLAnchorElement, MouseEvent>,
   ) => {
@@ -36,4 +36,4 @@ export const MainMenuItem = ({
       {label}
     </a>
   );
-};
+}

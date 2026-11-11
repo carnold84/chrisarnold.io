@@ -16,8 +16,13 @@ export function subscribe(listener: Listener) {
   };
 }
 
-export const getPathname = () => window.location.pathname;
-export const getServerPathname = () => "/";
+export function getPathname() {
+  return window.location.pathname;
+}
+
+export function getServerPathname() {
+  return "/";
+}
 
 export function navigate(to: string, { replace = false } = {}) {
   if (replace) window.history.replaceState(null, "", to);

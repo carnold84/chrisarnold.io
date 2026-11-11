@@ -1,10 +1,14 @@
 import { lazy } from "react";
 import { Router, type RouteDef } from "@/components/Router";
 
-const About = lazy(() => import("@/routes/About"));
-const Code = lazy(() => import("@/routes/Code"));
+const About = lazy(() =>
+  import("@/routes/About").then((m) => ({ default: m.About })),
+);
+const Code = lazy(() =>
+  import("@/routes/Code").then((m) => ({ default: m.Code })),
+);
 
-function App() {
+export function App() {
   const routes: RouteDef[] = [
     {
       element: <About />,
@@ -18,5 +22,3 @@ function App() {
 
   return <Router routes={routes} fallback={<h1>Not found</h1>} />;
 }
-
-export default App;

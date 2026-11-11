@@ -9,7 +9,7 @@ export interface RouteProps {
   route: BaseRoute;
 }
 
-export const Route = ({ route }: RouteProps) => {
+export function Route({ route }: RouteProps) {
   const { element } = route;
 
   if (typeof element === "function") {
@@ -19,4 +19,4 @@ export const Route = ({ route }: RouteProps) => {
   }
 
   return element;
-};
+}

@@ -3,7 +3,7 @@ export interface LogoProps {
   width?: string;
 }
 
-export const Logo = ({ height = "19.5px", width = "34px" }: LogoProps) => {
+export function Logo({ height = "19.5px", width = "34px" }: LogoProps) {
   return (
     <svg
       width={width}
@@ -20,4 +20,4 @@ export const Logo = ({ height = "19.5px", width = "34px" }: LogoProps) => {
       />
     </svg>
   );
-};
+}

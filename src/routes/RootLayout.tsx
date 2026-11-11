@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 
-import Logo from "@/components/Logo";
-import MainMenuItem from "@/components/MainMenuItem";
+import { Logo } from "@/components/Logo";
+import { MainMenuItem } from "@/components/MainMenuItem";
 
 export interface MenuItem {
   id: string;
@@ -16,11 +16,11 @@ export interface RootLayoutProps {
   onRouteChange: (routeId: string) => void;
 }
 
-const RootLayout = ({
+export function RootLayout({
   children,
   menuItems,
   onRouteChange,
-}: RootLayoutProps) => {
+}: RootLayoutProps) {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <header className="fixed top-0 z-10 flex w-full items-center justify-between p-8">
@@ -47,6 +47,4 @@ const RootLayout = ({
       <main className="relative grow p-6 sm:p-20">{children}</main>
     </div>
   );
-};
-
-export default RootLayout;
+}
