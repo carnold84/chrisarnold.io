@@ -1,18 +1,22 @@
-import { useContext, useSyncExternalStore } from "react";
+import { useContext } from "react";
 import {
-  getPathname,
-  getServerPathname,
-  navigate,
-  subscribe,
-} from "./router.utils";
-import { type Params, ParamsContext } from "./router.context";
+  NavigateContext,
+  ParamsContext,
+  PathnameContext,
+  type Params,
+} from "./router.context";
+
+function useRequired<T>(value: T | null, hook: string): T {
+  if (value === null) throw new Error(`${hook} must be used inside <Router>`);
+  return value;
+}
 
 export function usePathname() {
-  return useSyncExternalStore(subscribe, getPathname, getServerPathname);
+  return useRequired(useContext(PathnameContext), "usePathname");
 }
 
 export function useNavigate() {
-  return navigate;
+  return useRequired(useContext(NavigateContext), "useNavigate");
 }
 
 export function useParams<T extends Params = Params>() {

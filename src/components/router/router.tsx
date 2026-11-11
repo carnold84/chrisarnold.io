@@ -1,32 +1,35 @@
-import { type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
+import { NavigateContext, PathnameContext } from "./router.context";
 
-import { usePathname } from "./router.hooks";
-import { matchPath } from "./router.utils";
-import { ParamsContext } from "./router.context";
-
-export type RouteDef = {
-  path: string;
-  element: ReactNode;
+type RouterProps = {
+  children: ReactNode;
+  /** Starting path for SSR or tests, where `window` isn't available. */
+  initialPath?: string;
 };
 
-export interface RouterProps {
-  routes: RouteDef[];
-  fallback?: ReactNode;
-}
+export function Router({ children, initialPath }: RouterProps) {
+  const [pathname, setPathname] = useState(
+    () => initialPath ?? window.location.pathname,
+  );
 
-export function Router({ routes, fallback = null }: RouterProps) {
-  const pathname = usePathname();
+  useEffect(() => {
+    const onPopState = () => setPathname(window.location.pathname);
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
-  for (const route of routes) {
-    const params = matchPath(route.path, pathname);
-    if (params) {
-      return (
-        <ParamsContext.Provider value={params}>
-          {route.element}
-        </ParamsContext.Provider>
-      );
-    }
-  }
+  const navigate = (to: string, { replace = false } = {}) => {
+    if (replace) window.history.replaceState(null, "", to);
+    else window.history.pushState(null, "", to);
+    // Read back from the browser so relative URLs ("../foo") resolve correctly
+    setPathname(window.location.pathname);
+  };
 
-  return <>{fallback}</>;
+  return (
+    <NavigateContext.Provider value={navigate}>
+      <PathnameContext.Provider value={pathname}>
+        {children}
+      </PathnameContext.Provider>
+    </NavigateContext.Provider>
+  );
 }
