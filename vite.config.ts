@@ -3,6 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
+// oxlint-disable-next-line import/no-default-export
 export default defineConfig({
   plugins: [
     react(),

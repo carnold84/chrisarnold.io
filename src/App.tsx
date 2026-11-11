@@ -1,11 +1,11 @@
 import { lazy } from "react";
-import { Router, type RouteDef } from "@/components/Router";
+import { Router, type RouteDef } from "@/components/router";
 
 const About = lazy(() =>
-  import("@/routes/About").then((m) => ({ default: m.About })),
+  import("@/routes/about").then((m) => ({ default: m.About })),
 );
 const Code = lazy(() =>
-  import("@/routes/Code").then((m) => ({ default: m.Code })),
+  import("@/routes/code").then((m) => ({ default: m.Code })),
 );
 
 export function App() {

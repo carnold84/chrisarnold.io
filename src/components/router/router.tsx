@@ -1,8 +1,8 @@
 import { type ReactNode } from "react";
 
-import { usePathname } from "./Router.hooks";
-import { ParamsContext } from "./Router.types";
-import { matchPath } from "./Router.utils";
+import { usePathname } from "./router.hooks";
+import { ParamsContext } from "./router.types";
+import { matchPath } from "./router.utils";
 
 export type RouteDef = {
   path: string;

@@ -4,8 +4,8 @@ import {
   getServerPathname,
   navigate,
   subscribe,
-} from "./Router.utils";
-import { ParamsContext, type Params } from "./Router.types";
+} from "./router.utils";
+import { ParamsContext, type Params } from "./router.types";
 
 export function usePathname() {
   return useSyncExternalStore(subscribe, getPathname, getServerPathname);
