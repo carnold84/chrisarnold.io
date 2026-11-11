@@ -1,4 +1,4 @@
-import type { Params } from "./router.types";
+import type { Params } from "./router.context";
 
 type Listener = () => void;
 const listeners = new Set<Listener>();

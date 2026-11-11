@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { Router, type RouteDef } from "@/components/router";
+import { RootLayout } from "./components/layouts/root-layout";
 
 const About = lazy(() =>
   import("@/routes/about").then((m) => ({ default: m.About })),
@@ -20,5 +21,9 @@ export function App() {
     },
   ];
 
-  return <Router routes={routes} fallback={<h1>Not found</h1>} />;
+  return (
+    <RootLayout>
+      <Router routes={routes} fallback={<h1>Not found</h1>} />
+    </RootLayout>
+  );
 }

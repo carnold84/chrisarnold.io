@@ -1,8 +1,8 @@
 import { type ReactNode } from "react";
 
 import { usePathname } from "./router.hooks";
-import { ParamsContext } from "./router.types";
 import { matchPath } from "./router.utils";
+import { ParamsContext } from "./router.context";
 
 export type RouteDef = {
   path: string;
@@ -27,5 +27,6 @@ export function Router({ routes, fallback = null }: RouterProps) {
       );
     }
   }
+
   return <>{fallback}</>;
 }
