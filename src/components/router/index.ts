@@ -1,3 +1,3 @@
-export { Router, type RouteDef } from "./router";
+export { Router, type RouteDef } from "./Router";
 
-export { Link } from "./components/Link/link";
+export { Link } from "./components/Link/Link";

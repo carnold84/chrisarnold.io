@@ -1,3 +1,3 @@
-export type { MenuItem } from "./root-layout";
+export type { MenuItem } from "./RootLayout";
 
-export { default } from "./root-layout";
+export { default } from "./RootLayout";

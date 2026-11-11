@@ -1,6 +1,6 @@
 import { type AnchorHTMLAttributes, type MouseEvent } from "react";
 
-import { navigate } from "../../router.utils";
+import { navigate } from "../../Router.utils";
 
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   replace?: boolean;
