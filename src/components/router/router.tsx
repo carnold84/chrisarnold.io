@@ -1,16 +1,14 @@
 import { useEffect, useState, type ReactNode } from "react";
+
 import { NavigateContext, PathnameContext } from "./router.context";
 
 type RouterProps = {
   children: ReactNode;
-  /** Starting path for SSR or tests, where `window` isn't available. */
   initialPath?: string;
 };
 
 export function Router({ children, initialPath }: RouterProps) {
-  const [pathname, setPathname] = useState(
-    () => initialPath ?? window.location.pathname,
-  );
+  const [pathname, setPathname] = useState(() => initialPath ?? window.location.pathname);
 
   useEffect(() => {
     const onPopState = () => setPathname(window.location.pathname);
@@ -27,9 +25,7 @@ export function Router({ children, initialPath }: RouterProps) {
 
   return (
     <NavigateContext.Provider value={navigate}>
-      <PathnameContext.Provider value={pathname}>
-        {children}
-      </PathnameContext.Provider>
+      <PathnameContext.Provider value={pathname}>{children}</PathnameContext.Provider>
     </NavigateContext.Provider>
   );
 }

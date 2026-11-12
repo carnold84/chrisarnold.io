@@ -1,7 +1,8 @@
 import type { AnchorHTMLAttributes, MouseEvent } from "react";
+
 import { useNavigate } from "../router.hooks";
 
-type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   to: string;
   replace?: boolean;
 };

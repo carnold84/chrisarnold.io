@@ -5,11 +5,7 @@ import { defineConfig } from "vite";
 
 // oxlint-disable-next-line import/no-default-export
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-    babel({ presets: [reactCompilerPreset()] }),
-  ],
+  plugins: [react(), tailwindcss(), babel({ presets: [reactCompilerPreset()] })],
   resolve: {
     tsconfigPaths: true,
   },

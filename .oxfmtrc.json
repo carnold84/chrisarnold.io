@@ -14,7 +14,7 @@
     "sortScripts": true
   },
   "sortTailwindcss": {
-    "stylesheet": "./path/to/stylesheet.css",
+    "stylesheet": "./src/index.css",
     "functions": ["clsx", "cn"],
     "preserveWhitespace": true
   }
