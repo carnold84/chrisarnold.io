@@ -2,14 +2,14 @@ import { useEffect, useRef, useState } from "react";
 
 import { Loading } from "./loading/loading";
 
-interface Props {
+export type PictureProps = {
   alt?: string;
   height?: number;
   url: string;
   width?: number;
-}
+};
 
-export const Picture = ({ alt = "", height, url, width }: Props) => {
+export const Picture = ({ alt = "", height, url, width }: PictureProps) => {
   const [scaledHeight, setScaledHeight] = useState("60px");
   const [isLoading, setIsLoading] = useState(true);
   const [opacity, setOpacity] = useState(0);

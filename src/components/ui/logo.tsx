@@ -1,7 +1,7 @@
-export interface LogoProps {
+export type LogoProps = {
   height?: string;
   width?: string;
-}
+};
 
 export function Logo({ height = "19.5px", width = "34px" }: LogoProps) {
   return (

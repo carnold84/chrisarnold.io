@@ -25,7 +25,7 @@ const imageVariants = {
   hover: { scale: 1.1 },
 };
 
-interface Props {
+export type ImageProps = {
   alt?: string;
   height?: number;
   imageUrl: string;
@@ -33,9 +33,9 @@ interface Props {
   title?: string;
   to: string;
   width?: number;
-}
+};
 
-export const Image = ({ alt, height, imageUrl, subTitle, title, to, width }: Props) => {
+export const Image = ({ alt, height, imageUrl, subTitle, title, to, width }: ImageProps) => {
   return (
     <motion.div className="image backface-hidden" variants={variants}>
       <Link
@@ -65,7 +65,7 @@ export const Image = ({ alt, height, imageUrl, subTitle, title, to, width }: Pro
               ease: [0.43, 0.13, 0.23, 0.96],
             },
           }}
-          className="text-h5 text-text-500 mb-2"
+          className="mb-2 text-h5 text-text-500"
           initial={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" }}
           exit={{
             clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
@@ -83,7 +83,7 @@ export const Image = ({ alt, height, imageUrl, subTitle, title, to, width }: Pro
               clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
               transition: { duration: 1, ease: "easeOut" },
             }}
-            className="text-body text-text-400 mt-1"
+            className="mt-1 text-body text-text-400"
             initial={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" }}
             exit={{
               clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",

@@ -8,11 +8,11 @@ import type { Experience } from "../about.types";
 
 import { TimelinePoint } from "./timeline-point";
 
-export interface ExperienceItemProps extends ComponentPropsWithoutRef<"div"> {
+export type ExperienceItemProps = ComponentPropsWithoutRef<"div"> & {
   experience: Experience;
   index: number;
   isVisible: boolean;
-}
+};
 
 export const ExperienceItem = forwardRef<HTMLDivElement, ExperienceItemProps>(
   ({ experience: { duration, employer, id, subTitle, title }, index, isVisible, ...rest }, ref) => {
