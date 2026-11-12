@@ -1,3 +1,5 @@
+import { AboutView } from "@/features/about";
+
 export function About() {
-  return <div>About</div>;
+  return <AboutView />;
 }

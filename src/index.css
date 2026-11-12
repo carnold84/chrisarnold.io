@@ -1,1 +1,89 @@
 @import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --color-inherit: inherit;
+  --color-current: currentColor;
+
+  --color-neutral-50: #13171b;
+  --color-neutral-100: #2d3134;
+  --color-neutral-200: #474b4e;
+  --color-neutral-300: #626467;
+  --color-neutral-400: #7c7e80;
+  --color-neutral-500: #96989a;
+  --color-neutral-600: #b0b2b3;
+  --color-neutral-700: #cbcbcc;
+  --color-neutral-800: #e5e5e6;
+  --color-neutral-900: #ffffff;
+
+  --color-text-100: #525c67;
+  --color-text-200: #7d858d;
+  --color-text-300: #a9aeb3;
+  --color-text-400: #d4d6d9;
+  --color-text-500: #ffffff;
+
+  --color-transparent: transparent;
+
+  --font-*: initial;
+  --font-body: Source Sans Pro, sans-serif;
+  --font-display: Poppins, sans-serif;
+
+  --text-*: initial;
+  --text-xs: 0.707rem;
+  --text-xs--line-height: 1.75;
+  --text-sm: 0.8827rem;
+  --text-sm--line-height: 1.75;
+  --text-body: 1rem;
+  --text-body--line-height: 1.75;
+  --text-h5: 1.414rem;
+  --text-h5--line-height: 1.3;
+  --text-h4: 1.999rem;
+  --text-h4--line-height: 1.3;
+  --text-h3: 2.827rem;
+  --text-h3--line-height: 1.3;
+  --text-h2: 3.998rem;
+  --text-h2--line-height: 1.3;
+  --text-h1: 5.653rem;
+  --text-h1--line-height: 1.3;
+
+  --font-weight-*: initial;
+  --font-weight-normal: 300;
+  --font-weight-medium: 400;
+
+  --breakpoint-xs: 580px;
+
+  --transition-duration-2000: 2000ms;
+
+  --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+body {
+  @apply bg-neutral-50 font-normal;
+}
+
+::-webkit-scrollbar {
+  @apply bg-neutral-900/5;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-900/5;
+}

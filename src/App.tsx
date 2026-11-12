@@ -7,6 +7,21 @@ import { Logo } from "./components/ui/logo";
 const About = lazy(() => import("@/routes/about").then((m) => ({ default: m.About })));
 const Code = lazy(() => import("@/routes/code").then((m) => ({ default: m.Code })));
 
+const routes = [
+  {
+    element: <About />,
+    id: "about",
+    label: "About",
+    path: "/",
+  },
+  {
+    element: <Code />,
+    id: "code",
+    label: "Code",
+    path: "/code",
+  },
+];
+
 export function App() {
   return (
     <Router>
@@ -17,29 +32,23 @@ export function App() {
           </Link>
           <nav className="flex">
             <ul className="flex gap-6">
-              <li>
-                <NavLink to="/">About</NavLink>
-              </li>
-              <li>
-                <NavLink to="/code">Code</NavLink>
-              </li>
+              {routes.map((route) => {
+                return (
+                  <li key={route.id}>
+                    <NavLink
+                      className="font-display text-sm text-text-300 lowercase [.active]:text-text-500"
+                      to={route.path}
+                    >
+                      {route.label}
+                    </NavLink>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         </header>
         <main className="relative grow p-6 sm:p-20">
-          <Routes
-            routes={[
-              {
-                element: <About />,
-                path: "/",
-              },
-              {
-                element: <Code />,
-                path: "/code",
-              },
-            ]}
-            fallback={<h1>Not found</h1>}
-          />
+          <Routes routes={routes} fallback={<h1>Not found</h1>} />
         </main>
       </div>
     </Router>
