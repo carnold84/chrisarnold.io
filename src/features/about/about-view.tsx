@@ -13,7 +13,9 @@ const experience = experienceData.reverse().map((exp, index) => ({
 }));
 
 export const AboutView = () => {
-  const [visibleExperienceIds, setVisibleExperienceIds] = useState<string[]>([]);
+  const [visibleExperienceIds, setVisibleExperienceIds] = useState<string[]>(
+    [],
+  );
 
   useEffect(() => {
     const options = {
@@ -75,9 +77,9 @@ export const AboutView = () => {
             Hello.
           </h1>
           <h2 className="text-h6 pl-1 text-center font-display text-text-500 md:text-h5 md:leading-9">
-            I'm a front-end developer and designer who likes to write clean, elegant, functional
-            code and partner it with clean, beautiful design, and well thought out, user-friendly
-            interfaces.
+            I'm a front-end developer and designer who likes to write clean,
+            elegant, functional code and partner it with clean, beautiful
+            design, and well thought out, user-friendly interfaces.
           </h2>
         </div>
       </div>
@@ -115,7 +117,10 @@ export const AboutView = () => {
               Say Hello
             </h2>
             <div className="mb-2 h-10 border-l-2 border-dashed border-neutral-200 sm:h-20"></div>
-            <a className="text-h5 text-text-300 sm:text-h4" href={`mailto:${email}`}>
+            <a
+              className="text-h5 text-text-300 sm:text-h4"
+              href={`mailto:${email}`}
+            >
               {email}
             </a>
           </div>

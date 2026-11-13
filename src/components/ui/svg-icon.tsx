@@ -6,7 +6,11 @@ export type SVGIconProps = {
   width?: string;
 };
 
-export const SVGIcon = ({ children, height = "24px", width = "24px" }: SVGIconProps) => {
+export const SVGIcon = ({
+  children,
+  height = "24px",
+  width = "24px",
+}: SVGIconProps) => {
   return (
     <svg
       className="text-current"

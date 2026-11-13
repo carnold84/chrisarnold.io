@@ -15,7 +15,15 @@ export type ExperienceItemProps = ComponentPropsWithoutRef<"div"> & {
 };
 
 export const ExperienceItem = forwardRef<HTMLDivElement, ExperienceItemProps>(
-  ({ experience: { duration, employer, id, subTitle, title }, index, isVisible, ...rest }, ref) => {
+  (
+    {
+      experience: { duration, employer, id, subTitle, title },
+      index,
+      isVisible,
+      ...rest
+    },
+    ref,
+  ) => {
     const isOdd = index % 2 === 0;
     const transformOrigin = isOdd ? "top right" : "top left";
 
@@ -73,7 +81,9 @@ export const ExperienceItem = forwardRef<HTMLDivElement, ExperienceItemProps>(
               style={{ transformOrigin }}
               variants={variants}
             >
-              <p className="mt-0 mb-1 font-display text-sm text-text-200 sm:text-h5">{duration}</p>
+              <p className="mt-0 mb-1 font-display text-sm text-text-200 sm:text-h5">
+                {duration}
+              </p>
             </motion.div>
             <motion.div
               animate={isVisible ? "visible" : "hidden"}

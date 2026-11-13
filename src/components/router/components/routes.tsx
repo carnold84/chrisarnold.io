@@ -10,13 +10,23 @@ export type RouteDef = {
 };
 
 /** Renders the first route whose path matches, or `fallback`. */
-export function Routes({ routes, fallback = null }: { routes: RouteDef[]; fallback?: ReactNode }) {
+export function Routes({
+  routes,
+  fallback = null,
+}: {
+  routes: RouteDef[];
+  fallback?: ReactNode;
+}) {
   const pathname = usePathname();
 
   for (const route of routes) {
     const params = matchPath(route.path, pathname);
     if (params) {
-      return <ParamsContext.Provider value={params}>{route.element}</ParamsContext.Provider>;
+      return (
+        <ParamsContext.Provider value={params}>
+          {route.element}
+        </ParamsContext.Provider>
+      );
     }
   }
 

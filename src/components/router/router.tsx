@@ -8,7 +8,9 @@ type RouterProps = {
 };
 
 export function Router({ children, initialPath }: RouterProps) {
-  const [pathname, setPathname] = useState(() => initialPath ?? window.location.pathname);
+  const [pathname, setPathname] = useState(
+    () => initialPath ?? window.location.pathname,
+  );
 
   useEffect(() => {
     const onPopState = () => setPathname(window.location.pathname);
@@ -25,7 +27,9 @@ export function Router({ children, initialPath }: RouterProps) {
 
   return (
     <NavigateContext.Provider value={navigate}>
-      <PathnameContext.Provider value={pathname}>{children}</PathnameContext.Provider>
+      <PathnameContext.Provider value={pathname}>
+        {children}
+      </PathnameContext.Provider>
     </NavigateContext.Provider>
   );
 }

@@ -4,8 +4,12 @@ import { Link, NavLink, Router, Routes } from "@/components/router";
 
 import { Logo } from "./components/ui/logo";
 
-const About = lazy(() => import("@/routes/about").then((m) => ({ default: m.About })));
-const Code = lazy(() => import("@/routes/code").then((m) => ({ default: m.Code })));
+const About = lazy(() =>
+  import("@/routes/about").then((m) => ({ default: m.About })),
+);
+const Code = lazy(() =>
+  import("@/routes/code").then((m) => ({ default: m.Code })),
+);
 
 const routes = [
   {

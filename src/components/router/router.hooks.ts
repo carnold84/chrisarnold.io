@@ -1,6 +1,11 @@
 import { useContext } from "react";
 
-import { NavigateContext, ParamsContext, PathnameContext, type Params } from "./router.context";
+import {
+  NavigateContext,
+  ParamsContext,
+  PathnameContext,
+  type Params,
+} from "./router.context";
 
 function useRequired<T>(value: T | null, hook: string): T {
   if (value === null) throw new Error(`${hook} must be used inside <Router>`);
