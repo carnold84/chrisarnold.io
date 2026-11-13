@@ -1,6 +1,8 @@
 import { SVGIcon, type SVGIconProps } from "../components/ui/svg-icon";
 
-export const Link = ({ ...rest }: SVGIconProps) => {
+export type LinkProps = Omit<SVGIconProps, "children">;
+
+export const Link = ({ ...rest }: LinkProps) => {
   return (
     <SVGIcon {...rest}>
       <path

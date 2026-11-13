@@ -1,6 +1,8 @@
 import { SVGIcon, type SVGIconProps } from "../components/ui/svg-icon";
 
-export const GitHub = ({ ...rest }: SVGIconProps) => {
+export type GitHubProps = Omit<SVGIconProps, "children">;
+
+export const GitHub = ({ ...rest }: GitHubProps) => {
   return (
     <SVGIcon {...rest}>
       <path
