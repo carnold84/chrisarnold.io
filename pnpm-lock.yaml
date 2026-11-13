@@ -72,6 +72,9 @@ importers:
       vite:
         specifier: ^8.3.6
         version: 8.3.7(@types/node@24.19.2)(jiti@2.7.0)
+      vite-bundle-analyzer:
+        specifier: ^1.3.9
+        version: 1.3.9
 
 packages:
 
@@ -1166,6 +1169,10 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
+  vite-bundle-analyzer@1.3.9:
+    resolution: {integrity: sha512-hhy975B+ToseJaSJp3mURHriZUrMgaM2qx0BkP62kN6Yp46rw7EE3dl8ExFWYdn00OIwe7GbsA5PknvstNWG4Q==}
+    hasBin: true
+
   vite@8.3.7:
     resolution: {integrity: sha512-oxh0dMxrayBr33ScJvvBJ2HBQ2jc1TBrXKR2NyL/MJ9WPuX19mN2DXWUmywKdyw5RFVQBo8hmtb2FMC0LHrnng==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -2016,6 +2023,8 @@ snapshots:
       browserslist: 4.29.5
       escalade: 3.2.0
       picocolors: 1.1.1
+
+  vite-bundle-analyzer@1.3.9: {}
 
   vite@8.3.7(@types/node@24.19.2)(jiti@2.7.0):
     dependencies:

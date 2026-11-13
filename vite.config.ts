@@ -4,6 +4,7 @@ import react, { reactCompilerPreset } from "@vitejs/plugin-react";
 import matter from "gray-matter";
 import { marked } from "marked";
 import { defineConfig, type Plugin } from "vite";
+import { analyzer } from "vite-bundle-analyzer";
 
 const markdown = (): Plugin => ({
   name: "markdown",
@@ -29,6 +30,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] }),
+    analyzer(),
   ],
   resolve: {
     tsconfigPaths: true,
