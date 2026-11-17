@@ -2,9 +2,9 @@ import { useContext } from "react";
 
 import {
   NavigateContext,
+  type Params,
   ParamsContext,
   PathnameContext,
-  type Params,
 } from "./router.context";
 
 function useRequired<T>(value: T | null, hook: string): T {

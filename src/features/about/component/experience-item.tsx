@@ -1,8 +1,7 @@
-import type { Variants } from "motion";
-
 import { clsx } from "clsx";
+import type { Variants } from "motion";
 import { motion } from "motion/react";
-import { forwardRef, type ComponentPropsWithoutRef } from "react";
+import { type ComponentPropsWithoutRef, forwardRef } from "react";
 
 import type { Experience } from "../about.types";
 
