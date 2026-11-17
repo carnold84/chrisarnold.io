@@ -6,6 +6,9 @@
     }
   },
   "extends": ["@rammi/biome-config/biome"],
+  "files": {
+    "includes": ["!public"]
+  },
   "vcs": {
     "clientKind": "git",
     "enabled": true,
