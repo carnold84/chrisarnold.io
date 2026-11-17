@@ -231,7 +231,7 @@ packages:
     resolution: {integrity: sha512-1Duyg48TdJNdyhEB8Xn1L36bT9Pv6GUtlKjHxOys8xkaF/rQq3XJE+bAurSK/AgIz5mGFsb77cn9Pb20+WCScw==}
 
   '@rammi/biome-config@file:../rammi/packages/biome-config/rammi-biome-config-0.1.0.tgz':
-    resolution: {integrity: sha512-dMJFyXUbgNH6DFvoge+sh9XSDp9kg6rl+XC6agYVD7s71XrVxssLz0T++yF2rb3yhSezzf9vxm3kcFofFMT0Pg==, tarball: file:../rammi/packages/biome-config/rammi-biome-config-0.1.0.tgz}
+    resolution: {integrity: sha512-j7Z3NHP1C4HaOqhFNzVhKAfqWG1HFt8s0Af0BOLmaTfJTyGsxv0YxJT6DlpcLU2euD1NJnRXXU+WJm4w0bcmxQ==, tarball: file:../rammi/packages/biome-config/rammi-biome-config-0.1.0.tgz}
     version: 0.1.0
     peerDependencies:
       '@biomejs/biome': ^2.5.0

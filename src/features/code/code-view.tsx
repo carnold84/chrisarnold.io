@@ -31,12 +31,12 @@ export const CodeView = () => {
         y: 0,
       }}
       className="flex h-full w-full justify-center pt-20 sm:pt-32"
-      initial={{ opacity: 0, y: -100 }}
       exit={{
         opacity: 0,
         transition: { duration: 0.7, ease: "easeIn" },
         y: -100,
       }}
+      initial={{ opacity: 0, y: -100 }}
     >
       <div className="flex w-full max-w-3xl flex-col gap-3 lg:max-w-4xl xl:max-w-7xl">
         <h1 className="font-500 mb-3 text-center font-display text-h2 font-medium text-text-500 lowercase sm:text-h1">
@@ -51,8 +51,8 @@ export const CodeView = () => {
                 key={attributes.path}
                 number={i + 1}
                 repositoryLink={attributes.repositoryLink}
-                title={attributes.title}
                 tags={attributes.tags}
+                title={attributes.title}
               />
             );
           })}

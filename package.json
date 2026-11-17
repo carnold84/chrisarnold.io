@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc -b && vite build",
     "dev": "vite --port 3000",
-    "lint": "pnpm biome check --write",
-    "lint:check": "pnpm biome check",
+    "lint": "pnpm biome check --write .",
+    "lint:check": "pnpm biome check .",
     "preview": "vite preview"
   },
   "dependencies": {

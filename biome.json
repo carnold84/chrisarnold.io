@@ -1,14 +1,14 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.6.7/schema.json",
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "extends": ["@rammi/biome-config/biome"],
   "css": {
     "parser": {
       "tailwindDirectives": true
     }
+  },
+  "extends": ["@rammi/biome-config/biome"],
+  "vcs": {
+    "clientKind": "git",
+    "enabled": true,
+    "useIgnoreFile": true
   }
 }

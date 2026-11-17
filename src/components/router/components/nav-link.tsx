@@ -29,7 +29,6 @@ export function NavLink({
 
   return (
     <Link
-      to={to}
       aria-current={isActive ? "page" : undefined}
       className={
         typeof className === "function"
@@ -38,6 +37,7 @@ export function NavLink({
             undefined
       }
       style={typeof style === "function" ? style(state) : style}
+      to={to}
       {...rest}
     >
       {typeof children === "function" ? children(state) : children}
