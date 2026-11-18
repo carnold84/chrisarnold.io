@@ -37,8 +37,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(rollup@4.68.4)
       '@rammio/biome-config':
-        specifier: file:../rammio/packages/biome-config/rammio-biome-config-0.1.0.tgz
-        version: file:../rammio/packages/biome-config/rammio-biome-config-0.1.0.tgz(@biomejs/biome@2.6.7)
+        specifier: ^0.1.2
+        version: 0.1.2(@biomejs/biome@2.6.7)
       '@rolldown/plugin-babel':
         specifier: ^0.3.0
         version: 0.3.1(@babel/core@7.29.13)(rolldown@1.2.18)(vite@8.3.7(@types/node@24.19.2)(jiti@2.7.0)(yaml@2.9.1))
@@ -244,9 +244,8 @@ packages:
   '@oxc-project/types@0.156.0':
     resolution: {integrity: sha512-1Duyg48TdJNdyhEB8Xn1L36bT9Pv6GUtlKjHxOys8xkaF/rQq3XJE+bAurSK/AgIz5mGFsb77cn9Pb20+WCScw==}
 
-  '@rammio/biome-config@file:../rammio/packages/biome-config/rammio-biome-config-0.1.0.tgz':
-    resolution: {integrity: sha512-RiWMmI66fkSkc1XJvpE1GxcKf0kPhX2t5HKwsGOyBdpD6KmL5hbhLJPG9duUEZLaQRoAFWRzgNlkzgxM5o5aqw==, tarball: file:../rammio/packages/biome-config/rammio-biome-config-0.1.0.tgz}
-    version: 0.1.0
+  '@rammio/biome-config@0.1.2':
+    resolution: {integrity: sha512-5Ea1ld/upDoLLMoQI7zNOhTySyB+uqbWQcVrtyON0Pq4kqhN8xr/k9aukThN008zPDWplkBCweyNxyvdxjzXJQ==}
     peerDependencies:
       '@biomejs/biome': ^2.5.0
 
@@ -1701,7 +1700,7 @@ snapshots:
 
   '@oxc-project/types@0.156.0': {}
 
-  '@rammio/biome-config@file:../rammio/packages/biome-config/rammio-biome-config-0.1.0.tgz(@biomejs/biome@2.6.7)':
+  '@rammio/biome-config@0.1.2(@biomejs/biome@2.6.7)':
     dependencies:
       '@biomejs/biome': 2.6.7
 
