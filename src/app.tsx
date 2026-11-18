@@ -52,7 +52,7 @@ export function App() {
           </nav>
         </header>
         <main className="relative grow p-6 sm:p-20">
-          <Routes routes={routes} fallback={<h1>Not found</h1>} />
+          <Routes fallback={<h1>Not found</h1>} routes={routes} />
         </main>
       </div>
     </Router>

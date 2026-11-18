@@ -1,3 +1,5 @@
+import type { MDXComponents, MDXContent } from "mdx/types";
+
 import { GitHub } from "@/icons/git-hub";
 import { Link } from "@/icons/link";
 
@@ -7,8 +9,12 @@ const paddedNumber = (number: number) => {
   return number < 10 ? `0${number}` : number;
 };
 
+const contentComponents: MDXComponents = {
+  a: (props) => <a {...props} rel="noopener" target="_blank" />,
+};
+
 export type CodeItemProps = {
-  content: string;
+  Content: MDXContent;
   demoLink: string;
   number: number;
   repositoryLink: string;
@@ -17,7 +23,7 @@ export type CodeItemProps = {
 };
 
 export const CodeItem = ({
-  content,
+  Content,
   demoLink,
   number,
   repositoryLink,
@@ -32,10 +38,9 @@ export const CodeItem = ({
       <h2 className="row-start-1 mb-2 w-full shrink-0 font-display text-h4 text-text-500 lowercase lg:col-start-2">
         {title}
       </h2>
-      <div
-        className="row-start-2 mb-5 w-full text-body text-text-300 lg:col-start-2"
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      <div className="row-start-2 mb-5 w-full text-body text-text-300 lg:col-start-2">
+        <Content components={contentComponents} />
+      </div>
       {tags && (
         <p className="row-start-3 text-body text-text-400 lowercase sm:mb-5 lg:col-start-2">
           <span className="text-text-tertiary">Tags:</span> {tags}

@@ -27,5 +27,5 @@ export function Link({ to, replace, onClick, target, ...rest }: LinkProps) {
     navigate(to, { replace });
   }
 
-  return <a href={to} target={target} onClick={handleClick} {...rest} />;
+  return <a href={to} onClick={handleClick} target={target} {...rest} />;
 }

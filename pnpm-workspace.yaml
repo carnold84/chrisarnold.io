@@ -1,0 +1,2 @@
+minimumReleaseAgeExclude:
+  - "@rammio/biome-config@0.1.2"

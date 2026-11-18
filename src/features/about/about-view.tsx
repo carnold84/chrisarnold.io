@@ -64,12 +64,12 @@ export const AboutView = () => {
         y: 0,
       }}
       className="flex h-full w-full flex-col items-center"
-      initial={{ opacity: 0, y: -100 }}
       exit={{
         opacity: 0,
         transition: { duration: 0.7, ease: "easeIn" },
         y: -100,
       }}
+      initial={{ opacity: 0, y: -100 }}
     >
       <div className="flex h-[75vh] w-full items-center justify-center">
         <div className="w-full max-w-3xl">
