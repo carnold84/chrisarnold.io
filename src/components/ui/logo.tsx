@@ -8,6 +8,7 @@ export function Logo({ height = "19.5px", width = "34px" }: LogoProps) {
     <svg
       fill="none"
       height={height}
+      role="presentation"
       viewBox="0 0 51 26"
       width={width}
       xmlns="http://www.w3.org/2000/svg"
