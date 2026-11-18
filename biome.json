@@ -5,7 +5,7 @@
       "tailwindDirectives": true
     }
   },
-  "extends": ["@rammi/biome-config/biome"],
+  "extends": ["@rammio/biome-config/biome"],
   "files": {
     "includes": ["!public"]
   },

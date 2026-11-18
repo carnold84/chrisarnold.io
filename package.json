@@ -21,7 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.29.7",
     "@biomejs/biome": "2.6.7",
-    "@rammi/biome-config": "file:../rammi/packages/biome-config/rammi-biome-config-0.1.0.tgz",
+    "@rammio/biome-config": "file:../rammio/packages/biome-config/rammio-biome-config-0.1.0.tgz",
     "@rolldown/plugin-babel": "^0.3.0",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.19.2",
