@@ -7,7 +7,6 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
 import { analyzer } from "vite-bundle-analyzer";
 
-// oxlint-disable-next-line import/no-default-export
 export default defineConfig({
   plugins: [
     {
