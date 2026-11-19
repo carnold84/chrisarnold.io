@@ -6,7 +6,7 @@ export type CardLinkProps = {
   icon: ReactNode;
 };
 
-export const CardLink = ({ children, href, icon }: CardLinkProps) => {
+export function CardLink({ children, href, icon }: CardLinkProps) {
   return (
     <a
       className="flex items-center justify-center bg-transparent text-body text-text-400 lowercase hover:fill-text-500 hover:text-text-500 sm:inline-flex"
@@ -18,4 +18,4 @@ export const CardLink = ({ children, href, icon }: CardLinkProps) => {
       <span className="ml-1.5">{children}</span>
     </a>
   );
-};
+}

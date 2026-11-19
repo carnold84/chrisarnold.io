@@ -2,7 +2,7 @@ import { SVGIcon, type SVGIconProps } from "../components/ui/svg-icon";
 
 export type ExternalLinkProps = Omit<SVGIconProps, "children">;
 
-export const ExternalLink = ({ ...rest }: ExternalLinkProps) => {
+export function ExternalLink({ ...rest }: ExternalLinkProps) {
   return (
     <SVGIcon {...rest}>
       <path
@@ -11,4 +11,4 @@ export const ExternalLink = ({ ...rest }: ExternalLinkProps) => {
       />
     </SVGIcon>
   );
-};
+}

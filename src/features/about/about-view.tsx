@@ -12,7 +12,7 @@ const experience = experienceData.reverse().map((exp, index) => ({
   ref: createRef<HTMLDivElement>(),
 }));
 
-export const AboutView = () => {
+export function AboutView() {
   const [visibleExperienceIds, setVisibleExperienceIds] = useState<string[]>(
     [],
   );
@@ -128,4 +128,4 @@ export const AboutView = () => {
       </div>
     </motion.div>
   );
-};
+}

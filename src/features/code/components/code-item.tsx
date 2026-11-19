@@ -22,14 +22,14 @@ export type CodeItemProps = {
   title: string;
 };
 
-export const CodeItem = ({
+export function CodeItem({
   Content,
   demoLink,
   number,
   repositoryLink,
   tags,
   title,
-}: CodeItemProps) => {
+}: CodeItemProps) {
   return (
     <div className="grid w-full grid-cols-1 grid-rows-[auto_1fr_auto_40px] border border-neutral-100 bg-neutral-50 p-10 lg:grid-cols-[60px_1fr]">
       <h3 className="hidden shrink-0 font-display text-h4 text-text-200 lg:col-start-1 lg:row-span-4 lg:row-start-1 lg:flex">
@@ -60,4 +60,4 @@ export const CodeItem = ({
       </div>
     </div>
   );
-};
+}

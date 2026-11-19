@@ -23,7 +23,7 @@ const mdFiles = Object.values(modules).sort(
   (a, b) => a.frontmatter.order - b.frontmatter.order,
 );
 
-export const CodeView = () => {
+export function CodeView() {
   return (
     <motion.div
       animate={{
@@ -61,4 +61,4 @@ export const CodeView = () => {
       </div>
     </motion.div>
   );
-};
+}

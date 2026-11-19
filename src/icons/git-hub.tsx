@@ -2,7 +2,7 @@ import { SVGIcon, type SVGIconProps } from "../components/ui/svg-icon";
 
 export type GitHubProps = Omit<SVGIconProps, "children">;
 
-export const GitHub = ({ ...rest }: GitHubProps) => {
+export function GitHub({ ...rest }: GitHubProps) {
   return (
     <SVGIcon {...rest}>
       <path
@@ -11,4 +11,4 @@ export const GitHub = ({ ...rest }: GitHubProps) => {
       />
     </SVGIcon>
   );
-};
+}
