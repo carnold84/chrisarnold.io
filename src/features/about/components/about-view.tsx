@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { createRef, useEffect, useState } from "react";
+
+import { site } from "@/content/site";
 import { experienceData } from "../content/experience";
 import { ExperienceItem } from "./experience-item";
 import { TimelinePoint } from "./timeline-point";
@@ -76,9 +78,7 @@ export function AboutView() {
             Hello.
           </h1>
           <h2 className="text-h6 pl-1 text-center font-display text-text-500 md:text-h5 md:leading-9">
-            I'm a front-end developer and designer who likes to write clean,
-            elegant, functional code and partner it with clean, beautiful
-            design, and well thought out, user-friendly interfaces.
+            {site.description}
           </h2>
         </div>
       </div>

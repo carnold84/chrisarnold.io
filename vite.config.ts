@@ -7,6 +7,8 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
 import { analyzer } from "vite-bundle-analyzer";
 
+import { siteFiles } from "./plugins/site-files.ts";
+
 export default defineConfig({
   plugins: [
     {
@@ -20,6 +22,7 @@ export default defineConfig({
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] }),
     analyzer(),
+    siteFiles(),
   ],
   resolve: {
     tsconfigPaths: true,
