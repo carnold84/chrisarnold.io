@@ -1,7 +1,7 @@
 import type { MDXContent } from "mdx/types";
 import { motion } from "motion/react";
 
-import { CodeItem } from "./components/code-item";
+import { CodeItem } from "./code-item";
 
 type MarkdownFile = {
   default: MDXContent;
@@ -16,7 +16,7 @@ type MarkdownFile = {
   };
 };
 
-const modules = import.meta.glob<MarkdownFile>("./content/*.md", {
+const modules = import.meta.glob<MarkdownFile>("../content/*.md", {
   eager: true,
 });
 const mdFiles = Object.values(modules).sort(
