@@ -1,4 +1,4 @@
-import type { Experience } from "../about.types";
+import type { Experience } from "../about.types.ts";
 
 export const experienceData: Experience[] = [
   {
