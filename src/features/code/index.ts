@@ -1,1 +1,1 @@
-export { CodeView } from "./code-view";
+export { CodeView } from "./components/code-view";

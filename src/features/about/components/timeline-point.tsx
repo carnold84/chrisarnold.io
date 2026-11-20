@@ -17,7 +17,7 @@ export type TimelinePointProps = {
   isPulsing?: boolean;
 };
 
-export const TimelinePoint = ({ isPulsing = false }: TimelinePointProps) => {
+export function TimelinePoint({ isPulsing = false }: TimelinePointProps) {
   return (
     <div className="flex h-full flex-col items-center">
       <div className="relative flex h-8 w-8 items-center justify-center">
@@ -49,4 +49,4 @@ export const TimelinePoint = ({ isPulsing = false }: TimelinePointProps) => {
       <div className="grow border-l-2 border-dashed border-neutral-200"></div>
     </div>
   );
-};
+}

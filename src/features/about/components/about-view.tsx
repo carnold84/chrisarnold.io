@@ -1,9 +1,8 @@
 import { motion } from "motion/react";
 import { createRef, useEffect, useState } from "react";
-
-import { ExperienceItem } from "./component/experience-item";
-import { TimelinePoint } from "./component/timeline-point";
-import { experienceData } from "./content/experience";
+import { experienceData } from "../content/experience";
+import { ExperienceItem } from "./experience-item";
+import { TimelinePoint } from "./timeline-point";
 
 const email = import.meta.env.VITE_CONTACT_EMAIL;
 const experience = experienceData.reverse().map((exp, index) => ({
@@ -12,7 +11,7 @@ const experience = experienceData.reverse().map((exp, index) => ({
   ref: createRef<HTMLDivElement>(),
 }));
 
-export const AboutView = () => {
+export function AboutView() {
   const [visibleExperienceIds, setVisibleExperienceIds] = useState<string[]>(
     [],
   );
@@ -128,4 +127,4 @@ export const AboutView = () => {
       </div>
     </motion.div>
   );
-};
+}

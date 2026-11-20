@@ -1,7 +1,7 @@
 import type { MDXContent } from "mdx/types";
 import { motion } from "motion/react";
 
-import { CodeItem } from "./components/code-item";
+import { CodeItem } from "./code-item";
 
 type MarkdownFile = {
   default: MDXContent;
@@ -16,14 +16,14 @@ type MarkdownFile = {
   };
 };
 
-const modules = import.meta.glob<MarkdownFile>("./content/*.md", {
+const modules = import.meta.glob<MarkdownFile>("../content/*.md", {
   eager: true,
 });
 const mdFiles = Object.values(modules).sort(
   (a, b) => a.frontmatter.order - b.frontmatter.order,
 );
 
-export const CodeView = () => {
+export function CodeView() {
   return (
     <motion.div
       animate={{
@@ -61,4 +61,4 @@ export const CodeView = () => {
       </div>
     </motion.div>
   );
-};
+}
